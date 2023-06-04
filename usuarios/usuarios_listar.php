@@ -10,6 +10,9 @@
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
     if($_SERVER['REQUEST_METHOD']=='GET'){
+
+        
+
         $sql="SELECT * FROM usuarios";
 
         $stmt = $pdo->prepare($sql);
