@@ -13,7 +13,7 @@
 
         //POR ID
 
-        if(isset($_GET['id'])){
+        if(isset($_GET['consultarAdicionalporId'])){
             $sql=$pdo->prepare("SELECT * FROM adicionales WHERE id_adicional=:id");
             $sql->bindValue(':id',$_GET['id']);
             $sql->execute();
@@ -33,7 +33,7 @@
 
 
         //POR NOMBRE
-        if(isset($_GET['id'])){
+        if(isset($_GET['consultarUsuarioporNombre'])){
             $sql=$pdo->prepare("SELECT * FROM adicionales WHERE nombre_adicional=:nombre_adicional");
             $sql->bindValue(':id',$_GET['id']);
             $sql->execute();

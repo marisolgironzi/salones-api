@@ -13,9 +13,9 @@
 
         //Por id_usuario
 
-        if(isset($_GET['id'])){
-            $sql=$pdo->prepare("SELECT * FROM usuarios WHERE id_usuario=:id");
-            $sql->bindValue(':id',$_GET['id']);
+        if(isset($_GET['consultarUsuarioporId'])){
+            $sql=$pdo->prepare("SELECT * FROM usuarios WHERE id_usuario=:id_usuario");
+            $sql->bindValue(':id_usuario',$_GET['id_usuario']);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_ASSOC);
             header("HTTP/1.1 200 OK");
@@ -33,9 +33,9 @@
 
 
         //Por nombre y apellido
-        if(isset($_GET['id'])){
-            $sql=$pdo->prepare("SELECT * FROM usuarios WHERE nombre=:nombre AND apellido=:apellido");
-            $sql->bindValue(':id',$_GET['id']);
+        if(isset($_GET['consultarUsuarioporNombreCompleto'])){
+            $sql=$pdo->prepare("SELECT * FROM usuarios WHERE nombre_usuario=:nombre_usuario AND apellido_usuario=:apellido_usuario");
+            $sql->bindValue(':id_usuario',$_GET['id_usuario']);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_ASSOC);
             header("HTTP/1.1 200 OK");
@@ -52,9 +52,9 @@
         }
 
         //Por usuario
-        if(isset($_GET['id'])){
-            $sql=$pdo->prepare("SELECT * FROM usuarios WHERE usuario=:usuario");
-            $sql->bindValue(':id',$_GET['id']);
+        if(isset($_GET['consultarUsuarioporUsuario'])){
+            $sql=$pdo->prepare("SELECT * FROM usuarios WHERE usuario_usuario=:usuario_usuario");
+            $sql->bindValue(':id_usuario',$_GET['id_usuario']);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_ASSOC);
             header("HTTP/1.1 200 OK");
@@ -70,10 +70,12 @@
             exit;
         }
 
-        //Por id_categoria
-        if(isset($_GET['id'])){
-            $sql=$pdo->prepare("SELECT * FROM usuarios WHERE usuario=:usuario");
-            $sql->bindValue(':id',$_GET['id']);
+        //Por nombre_categoria
+        if(isset($_GET['consultarUsuarioporCategoria'])){
+            $sql=$pdo->prepare("SELECT usuarios.*, categoria_usuario.nombre_categoria FROM usuarios 
+                                INNER JOIN categoria_usuario ON usuarios.idCategoria = categoria_usuario.id_categoria
+                                WHERE nombre_categoria = "administrador"");
+            $sql->bindValue(':idCategoria',$_GET['idCategoria']);
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_ASSOC);
             header("HTTP/1.1 200 OK");
