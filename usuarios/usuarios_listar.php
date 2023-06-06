@@ -11,15 +11,14 @@
 
     if($_SERVER['REQUEST_METHOD']=='GET'){
 
-        
-
-        $sql="SELECT * FROM usuarios";
-
-        $stmt = $pdo->prepare($sql);
-        $stmt->execute();       
-        header("HTTP/1.1 200 OK");
-        exit;
-
+        if (isset($_GET["listarUsuarios"])){
+            $sql="SELECT id_usuario, nombre_usuario, apellido_usuario, idCategoria_usuario FROM usuarios";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute();       
+            header("HTTP/1.1 200 OK");
+            exit;
+            }
+            else{ echo json_encode(["success"=>0]); }
     }
 
 ?>

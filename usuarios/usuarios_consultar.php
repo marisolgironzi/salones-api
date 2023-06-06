@@ -23,7 +23,7 @@
             exit;
         }
         else{
-            $sql=$pdo->prepare("SELECT * FROM usuarios");
+            $sql=$pdo->prepare("SELECT id_usuario, nombre_usuario, apellido_usuario, idCategoria_usuario FROM usuarios");
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_ASSOC);
             header("HTTP/1.1 200 OK");
@@ -43,7 +43,7 @@
             exit;
         }
         else{
-            $sql=$pdo->prepare("SELECT * FROM usuarios");
+            $sql=$pdo->prepare("SELECT id_usuario, nombre_usuario, apellido_usuario, idCategoria_usuario FROM usuarios");
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_ASSOC);
             header("HTTP/1.1 200 OK");
@@ -62,7 +62,7 @@
             exit;
         }
         else{
-            $sql=$pdo->prepare("SELECT * FROM usuarios");
+            $sql=$pdo->prepare("SELECT id_usuario, nombre_usuario, apellido_usuario, idCategoria_usuario FROM usuarios");
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_ASSOC);
             header("HTTP/1.1 200 OK");
@@ -83,7 +83,7 @@
             exit;
         }
         else{
-            $sql=$pdo->prepare("SELECT * FROM usuarios");
+            $sql=$pdo->prepare("SELECT id_usuario, nombre_usuario, apellido_usuario, idCategoria_usuario FROM usuarios");
             $sql->execute();
             $sql->setFetchMode(PDO::FETCH_ASSOC);
             header("HTTP/1.1 200 OK");
