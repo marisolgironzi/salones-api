@@ -8,6 +8,8 @@
     switch ($_SERVER['REQUEST_METHOD']) {
 
         //Tabla usuarios
+        case 'GET':
+            echo json_encode(Usuarios::listarUsuarios());
         case 'listarUsuarios':
             echo json_encode(Usuarios::listarUsuarios());
             break;
