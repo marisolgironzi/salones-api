@@ -8,10 +8,7 @@
     switch ($_SERVER['REQUEST_METHOD']) {
 
         //Tabla usuarios
-        case 'GET':
-            echo json_encode(Usuarios::listarUsuarios());
-            break;
-/*      case 'listarUsuarios':
+        case 'listarUsuarios':
             echo json_encode(Usuarios::listarUsuarios());
             break;
         case 'consultarUsuarioporId';
@@ -27,7 +24,7 @@
             echo json_decode(Usuarios::modificarUsuario()); 
             break;*/
 
- /*        //Tabla clientes
+        //Tabla clientes
         case 'listarClientes':
             echo json_encode(Clientes::listarClientes());
             break;
@@ -77,7 +74,7 @@
         case 'modificarSalon':
             echo json_decode(Salones::modificarSalon());
             break;
- */
+
         default:
             echo 'Error al mostrar los datos';
             break;
