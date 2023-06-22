@@ -8,7 +8,7 @@
     header("Access-Control-Allow-Methods: GET,PUT");
     header("Content-Type: application/json; charset=UTF-8");
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
-
+/* 
     if($_SERVER['REQUEST_METHOD']=='PUT'){
         $sql="UPDATE salones SET nombre_salon=:nombre_salon, capacidad_desde=:capacidad_desde, capacidad_hasta=:capacidad_hasta, id_servicio=:id_servicio WHERE id_salon=:id";
 
@@ -21,5 +21,5 @@
         header("HTTP/1.1 200 OK");
         exit;
     }
-
+ */
 ?>

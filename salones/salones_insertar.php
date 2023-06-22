@@ -9,7 +9,7 @@
     header("Content-Type: application/json; charset=UTF-8");
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-    if($_SERVER['REQUEST_METHOD']=='POST'){
+/*     if($_SERVER['REQUEST_METHOD']=='POST'){
         $sql="INSERT INTO salones (nombre_salon, capacidad_desde, capacidad_hasta, id_servicio) VALUES (:nombre_salon, :capacidad_desde, :capacidad_hasta, :id_servicio)";
 
         $stmt=$pdo->prepare($sql);
@@ -27,5 +27,5 @@
         }
         exit;
     }
-
+ */
 ?>

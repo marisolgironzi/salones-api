@@ -9,7 +9,7 @@
     header("Content-Type: application/json; charset=UTF-8");
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-    if($_SERVER['REQUEST_METHOD']=='DELETE'){
+/*     if($_SERVER['REQUEST_METHOD']=='DELETE'){
         if (isset($_GET["borrarUsuario"])) {
             $sql="DELETE * FROM usuarios WHERE id_usuario=:id";
 
@@ -21,6 +21,6 @@
         } else {
             else{  echo json_encode(["success"=>0]); }
         }
-    }
+    } */
 
 ?>

@@ -9,7 +9,7 @@
     header("Content-Type: application/json; charset=UTF-8");
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-    class listarUsuarios {
+/*     class listarUsuarios {
 
         public static function listarUsuarios(){
             $db = new conexion();
@@ -32,10 +32,10 @@
                 return $datos;
             }
             return $datos;
+        
+    } */
 
-    }
-
-    /*  if($_SERVER['listarUsuarios']=='GET'){
+/*     if($_SERVER['listarUsuarios']=='GET'){
 
         if (isset($_GET["id"])){
             $sql="SELECT usuarios.id_usuario, usuarios.nombre_usuario, usuarios.apellido_usuario, usuarios.usuario_usuario, usuarios.cont_usuario, categoria_usuario.nombre_categoria
@@ -45,7 +45,9 @@
             header("HTTP/1.1 200 OK");
             exit;
             }
-            else{ echo json_encode(["success"=>0]); } */
+            else{ echo json_encode(["success"=>0]); }
     }
+
+} */
 
 ?>

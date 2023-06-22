@@ -8,7 +8,7 @@
     header("Access-Control-Allow-Methods: GET,DELETE");
     header("Content-Type: application/json; charset=UTF-8");
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
-
+/* 
     if($_SERVER['REQUEST_METHOD']=='DELETE'){
         $sql="DELETE * FROM clientes WHERE id_cliente=:id";
 
@@ -18,5 +18,5 @@
         header("HTTP/1.1 200 OK");
         exit;
     }
-
+ */
 ?>

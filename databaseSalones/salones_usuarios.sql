@@ -28,10 +28,10 @@ CREATE TABLE `usuarios` (
   `apellido_usuario` varchar(45) NOT NULL,
   `usuario_usuario` varchar(45) NOT NULL,
   `cont_usuario` varchar(45) NOT NULL,
-  `idCategoria` int NOT NULL,
+  `idCategoria_usuario` int NOT NULL,
   PRIMARY KEY (`id_usuario`),
-  KEY `usuario-categoria_idx` (`idCategoria`),
-  CONSTRAINT `usuario-categoria` FOREIGN KEY (`idCategoria`) REFERENCES `categoria_usuario` (`id_categoria`)
+  KEY `usuario-categoria_idx` (`idCategoria_usuario`),
+  CONSTRAINT `usuario-categoria` FOREIGN KEY (`idCategoria_usuario`) REFERENCES `categoria_usuario` (`id_categoria`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-05 20:14:39
+-- Dump completed on 2023-06-22 11:41:25

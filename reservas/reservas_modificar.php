@@ -9,7 +9,7 @@
     header("Content-Type: application/json; charset=UTF-8");
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-    if($_SERVER['REQUEST_METHOD']=='PUT'){
+/*     if($_SERVER['REQUEST_METHOD']=='PUT'){
         $sql="UPDATE reservas SET id_cliente=:id_cliente, id_salon=:id_salon, id_evento=:id_evento, id_adicional=:id_adicional, mes=:mes, anio=:anio, detalles=:detalles WHERE id_reserva=:id";
 
         $stmt = $pdo->prepare($sql);
@@ -25,5 +25,5 @@
         header("HTTP/1.1 200 OK");
         exit;
     }
-
+ */
 ?>

@@ -9,7 +9,7 @@
     header("Content-Type: application/json; charset=UTF-8");
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-    if($_SERVER['REQUEST_METHOD']=='PUT'){
+/*     if($_SERVER['REQUEST_METHOD']=='PUT'){
         $sql="UPDATE usuarios SET nombre=:nombre, apellido=:apellido, usuario=:usuario, cont_usuario=:cont_usuario, id_categoria=:id_categoria WHERE id_usuario=:id";
 
         $stmt = $pdo->prepare($sql);
@@ -22,5 +22,5 @@
         header("HTTP/1.1 200 OK");
         exit;
     }
-
+ */
 ?>

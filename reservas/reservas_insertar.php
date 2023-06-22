@@ -8,7 +8,7 @@
     header("Access-Control-Allow-Methods: GET,POST");
     header("Content-Type: application/json; charset=UTF-8");
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
-
+/* 
     if($_SERVER['REQUEST_METHOD']=='POST'){
         $sql="INSERT INTO reservas (id_cliente, id_salon, id_evento, id_adicional, mes, anio, detalles) VALUES (:id_cliente, :id_salon, :id_evento, :id_adicional, :mes, :anio, :detalles)";
 
@@ -29,6 +29,6 @@
             echo json_encode($id_reserva);
         }
         exit;
-    }
+    } */
 
 ?>

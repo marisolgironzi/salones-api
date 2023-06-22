@@ -26,21 +26,15 @@ CREATE TABLE `reservas` (
   `id_reserva` int NOT NULL AUTO_INCREMENT,
   `id_cliente` int NOT NULL,
   `id_salon` int NOT NULL,
-  `id_evento` int NOT NULL,
-  `id_adicional` int DEFAULT NULL,
   `mes` varchar(45) NOT NULL,
   `anio` int NOT NULL,
   `detalles` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_reserva`),
   KEY `reserva-salon_idx` (`id_salon`),
-  KEY `reserva-evento_idx` (`id_evento`),
-  KEY `reserva-adicional_idx` (`id_adicional`),
   KEY `reserva-cliente_idx` (`id_cliente`),
-  CONSTRAINT `reserva-adicional` FOREIGN KEY (`id_adicional`) REFERENCES `adicionales` (`id_adicional`),
   CONSTRAINT `reserva-cliente` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`),
-  CONSTRAINT `reserva-evento` FOREIGN KEY (`id_evento`) REFERENCES `eventos` (`id_evento`),
   CONSTRAINT `reserva-salon` FOREIGN KEY (`id_salon`) REFERENCES `salones` (`id_salon`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -49,6 +43,7 @@ CREATE TABLE `reservas` (
 
 LOCK TABLES `reservas` WRITE;
 /*!40000 ALTER TABLE `reservas` DISABLE KEYS */;
+INSERT INTO `reservas` VALUES (1,1,2,'febrero',2024,'Infantil. 60 personas');
 /*!40000 ALTER TABLE `reservas` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -61,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-05 20:14:38
+-- Dump completed on 2023-06-22 11:41:25

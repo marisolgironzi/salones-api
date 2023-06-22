@@ -8,7 +8,7 @@
     header("Access-Control-Allow-Methods: GET,POST");
     header("Content-Type: application/json; charset=UTF-8");
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
-
+/* 
     if($_SERVER['REQUEST_METHOD']=='POST'){
         $sql="INSERT INTO usuarios (nombre, apellido, usuario, cont_usuario, id_categoria) VALUES (:nombre, :apellido, :usuario, :cont_usuario, :id_categoria)";
 
@@ -27,6 +27,6 @@
             echo json_encode($id_usuario);
         }
         exit;
-    }
+    } */
 
 ?>

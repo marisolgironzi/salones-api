@@ -9,7 +9,7 @@
     header("Content-Type: application/json; charset=UTF-8");
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-    if($_SERVER['REQUEST_METHOD']=='POST'){
+/*     if($_SERVER['REQUEST_METHOD']=='POST'){
         $sql="INSERT INTO categoria_usuario (nombre_categoria) VALUES (:nombre_categoria)";
 
         $stmt=$pdo->prepare($sql);
@@ -23,6 +23,6 @@
             echo json_encode($id_categoria);
         }
         exit;
-    }
+    } */
 
 ?>

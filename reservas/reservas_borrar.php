@@ -9,7 +9,7 @@
     header("Content-Type: application/json; charset=UTF-8");
     header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-    if($_SERVER['REQUEST_METHOD']=='DELETE'){
+/*     if($_SERVER['REQUEST_METHOD']=='DELETE'){
         $sql="DELETE * FROM reservas WHERE id_reserva=:id";
 
         $stmt=$pdo->prepare($sql);
@@ -18,5 +18,5 @@
         header("HTTP/1.1 200 OK");
         exit;
     }
-
+ */
 ?>

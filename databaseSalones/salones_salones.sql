@@ -27,10 +27,7 @@ CREATE TABLE `salones` (
   `nombre_salon` varchar(60) NOT NULL,
   `capacidad_desde` int NOT NULL,
   `capacidad_hasta` int NOT NULL,
-  `id_servicio` int NOT NULL,
-  PRIMARY KEY (`id_salon`),
-  KEY `salon-servicio_idx` (`id_servicio`),
-  CONSTRAINT `salon-servicio` FOREIGN KEY (`id_servicio`) REFERENCES `servicios` (`id_servicio`)
+  PRIMARY KEY (`id_salon`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -40,7 +37,7 @@ CREATE TABLE `salones` (
 
 LOCK TABLES `salones` WRITE;
 /*!40000 ALTER TABLE `salones` DISABLE KEYS */;
-INSERT INTO `salones` VALUES (1,'Agata',20,50,1),(2,'Fluorita',50,80,1),(3,'Granate',80,120,1),(4,'Turquesa',120,180,1);
+INSERT INTO `salones` VALUES (1,'Agata',20,50),(2,'Fluorita',50,80),(3,'Granate',80,120),(4,'Turquesa',120,180);
 /*!40000 ALTER TABLE `salones` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-06-05 20:14:37
+-- Dump completed on 2023-06-22 11:41:23
