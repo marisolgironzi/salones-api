@@ -76,7 +76,7 @@
             break;
 
         default:
-            echo 'Error al mostrar los datos';
+            echo 'Error al acceso de datos';
             break;
 
     }
